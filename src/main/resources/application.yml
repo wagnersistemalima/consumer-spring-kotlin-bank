@@ -1,3 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sistema-lima-accountingworker
+
 cloud:
   aws:
     queue:
@@ -9,3 +16,22 @@ cloud:
 
     region:
       static: "us-east-1"
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    beans.cache.time-to-live: 10s
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,metrics,info
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  health.circuitbreakers.enabled: true

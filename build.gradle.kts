@@ -32,6 +32,13 @@ dependencies {
 	implementation("org.springframework:spring-messaging:5.3.24")
 
 
+	// ---------------- Observability -----------------
+
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	// https://mvnrepository.com/artifact/io.micrometer/micrometer-core
+	implementation("io.micrometer:micrometer-core:1.11.1")
+// https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
+	implementation("io.micrometer:micrometer-registry-prometheus:1.11.1")
 
 	// https://mvnrepository.com/artifact/io.mockk/mockk
 	testImplementation("io.mockk:mockk:1.13.5")
