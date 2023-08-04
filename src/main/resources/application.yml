@@ -1,0 +1,11 @@
+cloud:
+  aws:
+    queue:
+      processor: "processor_queue"
+
+    topic:
+      accounting:
+        arn:
+
+    region:
+      static: "us-east-1"
